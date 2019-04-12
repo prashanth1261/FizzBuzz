@@ -11,12 +11,15 @@ class App extends Component {
   };
   onButtonpress() {
     const data1= this.state.data;
-    if (data1%15==0) {
-      Alert.alert(" Fizzbuzz");
+    if(data1=='') {
+      Alert.alert("enter a value");
+    }
+    else if (data1%15==0) {
+      Alert.alert(data1,"is Fizzbuzz");
     } else if ( data1%3==0) {
-      Alert.alert("Fizz");
+      Alert.alert(data1," is Fizz");
     } else if( data1%5==0) {
-      Alert.alert("buzz");
+      Alert.alert(data1," is buzz");
     } else {
       Alert.alert(data1)
     }
